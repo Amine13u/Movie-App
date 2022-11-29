@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Header from "../components/Header";
 import Banner from "../components/Banner";
+import Row from "../components/Row";
 import requests from "../utils/request";
 import { IMovie } from "../types";
 
@@ -26,7 +27,7 @@ const Home = ({
   documentaries,
 }: IProps) => {
   return (
-    <div className="relative h-[140vh] bg-gradient-to-b from-[#112d32] to-[#88bdbc] z-10">
+    <div className="relative h-[140vh]">
       <Head>
         <title>Movieflex</title>
         <link rel="icon" href="/icon.png" />
@@ -34,7 +35,15 @@ const Home = ({
       <Header />
       <main className="relative pl-4 pb-24 lg:space-y-24 lg:pl-16">
         <Banner originalsMovies={originalsMovies} />
-        <section></section>
+        <section className="md:space-y-20">
+          <Row title="Trending" movies={trendingNow} />
+          <Row title="Top Rated" movies={topRated} />
+          <Row title="Action" movies={actionMovies} />
+          <Row title="Comedy" movies={comedyMovies} />
+          <Row title="Horror" movies={horrorMovies} />
+          <Row title="Romance" movies={romanceMovies} />
+          <Row title="Documentaries" movies={documentaries} />
+        </section>
       </main>
     </div>
   );

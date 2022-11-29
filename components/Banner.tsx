@@ -26,8 +26,8 @@ function Banner({ originalsMovies }: IProps) {
   }, [originalsMovies]);
 
   return (
-    <div className="flex flex-col space-y-2 pt-48 justify-end md:space-y-4 lg:h-[65vh] ">
-      <div className="absolute top-0 left-0 h-[85vh] w-full z-20">
+    <div className="flex flex-col space-y-2 pt-48 justify-end mb-48 md:space-y-4 lg:h-[65vh]">
+      <div className="absolute top-0 left-0 h-[85vh] w-full ">
         <Image
           src={`${baseUrl}${movie?.backdrop_path || movie?.poster_path}`}
           alt="banner"
@@ -35,7 +35,7 @@ function Banner({ originalsMovies }: IProps) {
           fill
         />
       </div>
-      <div className="relative z-30 flex flex-col space-y-4 pt-10 pl-10">
+      <div className="relative flex flex-col space-y-4 pt-10 pl-10">
         <h1 className="text-2xl font-bold md:text-4xl lg:text-7xl ">
           {movie?.title || movie?.name || movie?.original_name}
         </h1>

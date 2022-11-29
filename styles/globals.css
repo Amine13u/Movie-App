@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-[#112d32] text-white;
+    @apply bg-[#112d32] text-white !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-[#9f9584];
   }
 
   header {
@@ -23,5 +23,9 @@
 
   .bannerIcon {
     @apply h-4 w-4 text-[#112d32] md:h-7 md:w-7;
+  }
+
+  .rowIcon {
+    @apply absolute top-0 bottom-0 z-40 m-auto h-9 w-9 cursor-pointer opacity-0 transition hover:scale-125 group-hover:opacity-100;
   }
 }
