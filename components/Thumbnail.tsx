@@ -12,7 +12,7 @@ function Thumbnail({ movie }: IProps) {
         src={`https://image.tmdb.org/t/p/w500${
           movie.backdrop_path || movie.poster_path
         }`}
-        className="rounded-sm object-cover md:rounded"
+        className="object-cover rounded-sm md:rounded"
         alt="movie_poster"
         fill
       />

@@ -29,7 +29,7 @@ const Home = ({
   return (
     <div className="relative h-[140vh]">
       <Head>
-        <title>Movieflex</title>
+        <title>Home - Movieflex</title>
         <link rel="icon" href="/icon.png" />
       </Head>
       <Header />
