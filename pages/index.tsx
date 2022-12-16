@@ -4,6 +4,7 @@ import Banner from "../components/Banner";
 import Row from "../components/Row";
 import requests from "../utils/request";
 import { IMovie } from "../types";
+import useAuth from "../hooks/useAuth";
 
 interface IProps {
   originalsMovies: IMovie[];
@@ -26,6 +27,10 @@ const Home = ({
   romanceMovies,
   documentaries,
 }: IProps) => {
+  const { logOut, isLoading } = useAuth();
+
+  if (isLoading) return "Loading ...";
+
   return (
     <div className="relative h-[140vh]">
       <Head>

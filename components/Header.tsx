@@ -5,9 +5,11 @@ import {
   BellIcon,
   UserCircleIcon,
 } from "@heroicons/react/20/solid";
+import useAuth from "../hooks/useAuth";
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const { logOut } = useAuth();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,9 +55,8 @@ function Header() {
           />
         </form>
         <BellIcon className="h-6 w-6" />
-        <Link href="/account">
-          <UserCircleIcon className="h-6 w-6 cursor-pointer" />
-        </Link>
+        {/* <Link href="/account"></Link> */}
+        <UserCircleIcon className="h-6 w-6 cursor-pointer" onClick={logOut} />
       </div>
     </header>
   );
